@@ -83,13 +83,13 @@ body::before {
 }
 
 .header-container {
-  max-width: var(--max-width);
+  max-width: 1240px;
   margin: 0 auto;
   height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
 }
 
 .header-brand {
@@ -195,14 +195,11 @@ body::before {
 .bio-subtitle {
   font-size: 1.14rem;
   color: var(--text-secondary);
-  max-width: 760px;
+  max-width: 780px;
   margin-bottom: 36px;
   font-weight: 300;
-  line-height: 1.65;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  line-height: 1.68;
+  text-align: left;
 }
 
 .bio-subtitle strong {
