@@ -89,6 +89,13 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header-name {
@@ -97,6 +104,7 @@ body::before {
   letter-spacing: -0.01em;
   color: var(--text-primary);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .header-nav {
@@ -111,6 +119,7 @@ body::before {
   font-size: 0.88rem;
   font-weight: 400;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .header-nav a:hover, .header-nav a.active {
@@ -120,7 +129,6 @@ body::before {
 .header-nav-wrapper {
   display: flex;
   align-items: center;
-  gap: 28px;
 }
 
 .lang-switch {
@@ -171,7 +179,7 @@ body::before {
 
 .bio-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 4.8vw, 3.6rem);
+  font-size: clamp(1.95rem, 6.2vw, 3.6rem);
   font-weight: 400;
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -750,6 +758,93 @@ body::before {
   background: var(--text-secondary);
   box-shadow: 0 12px 28px rgba(28, 25, 23, 0.3);
   transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO MÓVIL Y TABLET (MOBILE & INSTAGRAM IN-APP BROWSER)
+   ========================================================================== */
+@media (max-width: 860px) {
+  body {
+    padding: 0 16px;
+  }
+  .site-header {
+    padding: 0 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .header-container {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 0 10px;
+    gap: 12px;
+  }
+  .header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-name {
+    font-size: 1.02rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .header-nav-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .header-nav {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .bio-section {
+    margin: 36px auto 44px;
+  }
+  .bio-title {
+    font-size: clamp(1.85rem, 7.8vw, 2.5rem);
+    margin-bottom: 16px;
+  }
+  .bio-subtitle {
+    font-size: 1.02rem;
+    margin-bottom: 28px;
+  }
+  .meta-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .contact-box {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn-contact {
+    width: 100%;
+    justify-content: center;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-badges-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .social-badge {
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================
