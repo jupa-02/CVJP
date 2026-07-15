@@ -1,0 +1,854 @@
+/* ==========================================================================
+   JUAN PABLO DIAZ TOVAR - PERFIL ACADÉMICO Y PROFESIONAL
+   Diseño Editorial Minimalista, Ejecutivo y Elegante (Estilo Swiss / Linear)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Paleta Editorial Harvard Web - Monocromático Sepia y Carbón Puro (#1c1917) */
+  --bg-main: #f4f3ef;
+  --bg-card: #eae6de;
+  --bg-hover: #dfdbd2;
+  --border-light: rgba(28, 25, 23, 0.12);
+  --border-strong: rgba(28, 25, 23, 0.28);
+  
+  --text-primary: #1c1917;
+  --text-secondary: #44403c;
+  --text-tertiary: #78716c;
+  
+  --accent: #d6d2c4;
+  --accent-blue: #1c1917; /* Monocromático Carbón Puro para un estilo clásico Harvard */
+  --accent-ai: #1c1917;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --max-width: 880px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  padding: 0 24px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 1300px;
+  height: 520px;
+  background: radial-gradient(circle at 50% 0%, rgba(28, 25, 23, 0.05) 0%, transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN SUPERIOR FIJA Y TRANSLÚCIDA (STICKY HEADER)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 243, 239, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 0 24px;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-name {
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover, .header-nav a.active {
+  color: var(--text-primary);
+}
+
+.header-nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background: var(--text-primary);
+  color: #f4f3ef;
+  font-weight: 600;
+}
+
+.lang-sep {
+  color: var(--text-tertiary);
+  font-size: 0.72rem;
+}
+
+/* ==========================================================================
+   ENCABEZADO / BIO (HERO)
+   ========================================================================== */
+.bio-section {
+  max-width: var(--max-width);
+  margin: 64px auto 60px;
+}
+
+.bio-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4.8vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+}
+
+.bio-title em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.bio-subtitle {
+  font-size: 1.14rem;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-bottom: 36px;
+  font-weight: 300;
+  line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.bio-subtitle strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Tarjetas Ejecutivas de Destacado (Executive Summary Cards) */
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 700px) {
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.meta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.meta-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(28, 25, 23, 0.45);
+  box-shadow: 0 12px 28px rgba(28, 25, 23, 0.08);
+}
+
+.meta-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-card-value {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.meta-card-sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.bio-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-item strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(28, 25, 23, 0.4);
+  animation: pulse-sepia 2.2s infinite;
+}
+
+@keyframes pulse-sepia {
+  0% {
+    box-shadow: 0 0 0 0 rgba(28, 25, 23, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(28, 25, 23, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 25, 23, 0);
+  }
+}
+
+.copy-email-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-weight: 500;
+}
+
+.social-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: #eae6de;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.badge-icon {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.social-badge:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: #dfdbd2;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   SECCIONES PRINCIPALES
+   ========================================================================== */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto 96px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   BUSCADOR Y FILTROS EDITORIALES PARA PUBLICACIONES
+   ========================================================================== */
+.pub-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.pub-search-input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.pub-search-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.pub-search-input:focus {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(28, 25, 23, 0.08);
+  background: var(--bg-main);
+}
+
+.filter-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.filter-pill.active {
+  background: var(--text-primary);
+  color: var(--bg-main);
+  border-color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   LISTADO CRONOLÓGICO EDITORIAL (EXPERIENCIA & EDUCACIÓN)
+   ========================================================================== */
+.editorial-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 24px 12px;
+  border-bottom: 1px solid var(--border-light);
+  border-left: 2px solid transparent;
+  align-items: baseline;
+  transition: all 0.25s ease;
+  border-radius: 4px;
+}
+
+.list-item:hover {
+  background: rgba(28, 25, 23, 0.035);
+  border-left-color: var(--text-primary);
+  padding-left: 18px;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-date {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--text-tertiary);
+}
+
+.item-content h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.item-org {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.item-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+@media (max-width: 640px) {
+  .list-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 20px 0;
+  }
+  .item-date {
+    margin-bottom: 4px;
+  }
+}
+
+/* ==========================================================================
+   INVESTIGACIÓN Y PUBLICACIONES (BIBLIOGRAFÍA LIMPIA)
+   ========================================================================== */
+.category-group {
+  margin-bottom: 44px;
+  transition: opacity 0.3s ease;
+}
+
+.category-group:last-child {
+  margin-bottom: 0;
+}
+
+.category-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pub-entry {
+  padding-left: 18px;
+  border-left: 2px solid var(--border-strong);
+  line-height: 1.6;
+}
+
+.pub-title {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.pub-meta {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.pub-journal {
+  font-style: italic;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.pub-status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  margin-left: 6px;
+}
+
+/* ==========================================================================
+   COMPETENCIAS E INTELIGENCIA ARTIFICIAL (MINIMAL MATRIX)
+   ========================================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 28px;
+}
+
+.skill-category {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  border-color: rgba(28, 25, 23, 0.45);
+  box-shadow: 0 12px 28px rgba(28, 25, 23, 0.08);
+}
+
+.skill-category h4 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 5px 12px;
+  background: #eae6de;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  color: var(--text-secondary);
+}
+
+.tag.highlight {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: #dfdbd2;
+}
+
+/* ==========================================================================
+   CONTACTO EJECUTIVO
+   ========================================================================== */
+.contact-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contact-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #1c1917;
+  color: #f4f3ef;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn-contact:hover {
+  background: #292524;
+}
+
+/* Notificación Minimalista (Toast) */
+.toast-msg {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #1c1917;
+  border: 1px solid var(--border-strong);
+  color: #f4f3ef;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  box-shadow: 0 10px 25px rgba(28, 25, 23, 0.25);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.toast-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 0 64px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE VOLVER ARRIBA (BACK TO TOP)
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--text-primary);
+  color: var(--bg-main);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 99;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--text-secondary);
+  box-shadow: 0 12px 28px rgba(28, 25, 23, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   MODO DE IMPRESIÓN EDITORIAL HARVARD CV (@media print)
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 2cm 2cm;
+    size: A4;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+    padding: 0 !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+
+  .site-header,
+  .print-badge,
+  .toast-msg,
+  #pub-filters,
+  .filter-pills,
+  .pub-search-wrapper,
+  .back-to-top,
+  .copy-email-btn {
+    display: none !important;
+  }
+
+  #investigacion .category-group[data-category] {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  .pub-entry {
+    display: block !important;
+  }
+
+  .bio-title {
+    font-family: 'Newsreader', Georgia, serif !important;
+    font-size: 24pt !important;
+    color: #000000 !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .bio-subtitle, .item-desc {
+    text-align: justify !important;
+    color: #111827 !important;
+  }
+
+  .section {
+    margin-bottom: 24pt !important;
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    font-family: 'Newsreader', Georgia, serif !important;
+    font-size: 14pt !important;
+    color: #000000 !important;
+    border-bottom: 2pt solid #000000 !important;
+    margin-bottom: 14pt !important;
+    padding-bottom: 4pt !important;
+  }
+
+  .meta-card,
+  .skill-category,
+  .contact-box {
+    background: #ffffff !important;
+    border: 1pt solid #d1d5db !important;
+    border-left: 2pt solid #000000 !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  .meta-card-value,
+  .skill-category h4,
+  h1, h2, h3, h4, strong {
+    color: #000000 !important;
+  }
+
+  .tag {
+    background: #f3f4f6 !important;
+    border-color: #d1d5db !important;
+    color: #1f2937 !important;
+  }
+
+  .tag.highlight {
+    background: #e5e7eb !important;
+    font-weight: bold;
+  }
+
+  .social-badge {
+    background: transparent !important;
+    border: 1pt solid #6b7280 !important;
+    color: #000000 !important;
+  }
+}
