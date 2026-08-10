@@ -83,7 +83,7 @@ var translations = window.translations = {
 
     "res.art.head": "Artículos en Revistas Científicas Indexadas",
     "res.art.1.meta": "Escobar, A., Diaz, J. P., De la Hoz, B. · <span class=\"pub-journal\">Revista de Ciencias Sociales</span> <span class=\"pub-status\">[Categoría Q2 · Aceptado en proceso de publicación]</span>",
-    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Categoría C Publindex · Aceptado en proceso de publicación]</span>",
+    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Categoría C Publindex · Publicado]</span> <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" rel=\"noopener noreferrer\">[DOI]</a>",
 
     "res.inf.head": "Informes Técnicos Elaborados para la Alcaldía de Cartagena (2025)",
     "res.plat.head": "Plataformas Digitales e Interactivas Desarrolladas",
@@ -234,7 +234,7 @@ var translations = window.translations = {
 
     "res.art.head": "Peer-Reviewed Scientific Journal Articles",
     "res.art.1.meta": "Escobar, A., Diaz, J. P., De la Hoz, B. · <span class=\"pub-journal\">Revista de Ciencias Sociales</span> <span class=\"pub-status\">[Q2 Category · Accepted & In Press]</span>",
-    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Publindex C Category · Accepted & In Press]</span>",
+    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Publindex C Category · Published]</span> <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" rel=\"noopener noreferrer\">[DOI]</a>",
 
     "res.inf.head": "Technical Reports Prepared for the Mayor's Office of Cartagena (2025)",
     "res.plat.head": "Developed Digital & Interactive Platforms",
