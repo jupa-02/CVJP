@@ -1,0 +1,6 @@
+# Personal documents with sensitive info
+CV_JPD_2026.pdf
+*.pdf
+
+# System files
+.DS_Store

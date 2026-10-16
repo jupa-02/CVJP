@@ -42,8 +42,8 @@ var translations = window.translations = {
     "featured.takeaway.3": "<strong>3. La Implicación de Política:</strong> Las compras públicas tienen un efecto positivo y estadísticamente significativo sobre la probabilidad de innovar. Orientar estratégicamente la contratación pública es una palanca real de política industrial activa.",
 
     "hub.links.title": "Accesos Rápidos & Redes Sociales",
-    "hub.link.cv": "Hoja de Vida Completa (PDF)",
-    "hub.link.cv.sub": "Descargar versión editorial Harvard 2026",
+    "hub.link.pubs": "Producción Científica",
+    "hub.link.pubs.sub": "Artículos indexados e informes técnicos",
     "hub.link.linkedin": "LinkedIn Profesional",
     "hub.link.linkedin.sub": "Conectar, debatir y seguir análisis",
     "hub.link.github": "GitHub & Modelos Cuantitativos",
@@ -237,8 +237,8 @@ var translations = window.translations = {
     "featured.takeaway.3": "<strong>3. Policy Implication:</strong> Public procurement has a positive, statistically significant impact on innovation propensity, demonstrating that public buying is an effective active industrial policy lever.",
 
     "hub.links.title": "Quick Links & Professional Networks",
-    "hub.link.cv": "Full Curriculum Vitae (PDF)",
-    "hub.link.cv.sub": "Download Harvard editorial format 2026",
+    "hub.link.pubs": "Scientific Publications",
+    "hub.link.pubs.sub": "Peer-reviewed papers & technical reports",
     "hub.link.linkedin": "Professional LinkedIn",
     "hub.link.linkedin.sub": "Connect, debate, and follow economic analysis",
     "hub.link.github": "GitHub & Quantitative Code",
