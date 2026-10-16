@@ -350,6 +350,423 @@ body::before {
 }
 
 /* ==========================================================================
+   PÍLDORA DE AVISO DESTACADO (SPOTLIGHT NOTIFICATION PILL)
+   ========================================================================== */
+.spotlight-pill-wrapper {
+  margin-bottom: 24px;
+}
+
+.spotlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 6px 16px 6px 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(28, 25, 23, 0.04);
+}
+
+.spotlight-pill:hover {
+  background: var(--bg-hover);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(28, 25, 23, 0.08);
+}
+
+.spotlight-pill-badge {
+  background: var(--text-primary);
+  color: #f4f3ef;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.spotlight-pill-text {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.nav-highlight-link {
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  position: relative;
+}
+
+/* ==========================================================================
+   SECCIÓN LANDING HUB: RECURSOS DESTACADOS & ENLACES RÁPIDOS
+   ========================================================================== */
+.landing-hub-section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(234, 230, 222, 0.6) 0%, rgba(244, 243, 239, 0.9) 100%);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 36px 36px 40px;
+  margin-bottom: 72px !important;
+  box-shadow: 0 16px 40px -12px rgba(28, 25, 23, 0.06);
+}
+
+.hub-header {
+  margin-bottom: 28px;
+}
+
+.hub-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.hub-title {
+  font-size: 1.45rem !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.hub-lead {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* Tarjeta Hero de Alto Impacto para el Paper */
+.featured-paper-card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid var(--text-primary);
+  border-radius: 12px;
+  padding: 28px 28px 26px;
+  margin-bottom: 36px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 24px rgba(28, 25, 23, 0.06);
+}
+
+.featured-paper-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(28, 25, 23, 0.1);
+}
+
+/* Animación de Resplandor cuando se llega mediante #video o #destacados */
+.featured-paper-card.spotlight-glow,
+.featured-paper-card:target {
+  animation: pulse-glow-target 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse-glow-target {
+  0% {
+    box-shadow: 0 0 0 0 rgba(28, 25, 23, 0.35), 0 12px 30px rgba(28, 25, 23, 0.1);
+    border-color: #000;
+  }
+  30% {
+    box-shadow: 0 0 0 8px rgba(28, 25, 23, 0.18), 0 18px 42px rgba(28, 25, 23, 0.14);
+  }
+  100% {
+    box-shadow: 0 10px 24px rgba(28, 25, 23, 0.06);
+  }
+}
+
+.featured-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.featured-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.featured-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--text-primary);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.featured-journal-tag {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.featured-year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.featured-paper-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.28rem, 2.8vw, 1.65rem);
+  line-height: 1.32;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.featured-paper-authors {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Píldoras de Métricas y Metodología */
+.featured-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.metric-pill {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.metric-pill strong {
+  color: var(--text-primary);
+}
+
+/* Grid de Botones de Acción Inmediata (1 Clic) */
+.paper-actions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-paper-action {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-paper-action:hover {
+  background: var(--bg-hover);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 25, 23, 0.08);
+}
+
+.btn-paper-action:active {
+  transform: translateY(0);
+}
+
+.btn-primary-action {
+  background: var(--text-primary);
+  color: #f4f3ef;
+  border-color: var(--text-primary);
+}
+
+.btn-primary-action:hover {
+  background: #2e2a27;
+  color: #ffffff;
+  border-color: #2e2a27;
+}
+
+.action-btn-icon {
+  flex-shrink: 0;
+}
+
+/* Desplegable de Takeaways / Resumen Clave */
+.takeaways-drawer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+  animation: fadeInTakeaways 0.3s ease;
+}
+
+@keyframes fadeInTakeaways {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.takeaways-content {
+  background: var(--bg-card);
+  border-left: 3px solid var(--text-primary);
+  padding: 18px 22px;
+  border-radius: 6px;
+}
+
+.takeaways-header {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.takeaways-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.takeaways-list li strong {
+  color: var(--text-primary);
+}
+
+/* Panel de Enlaces Rápidos (Estilo Link Hub / Landing) */
+.hub-links-wrapper {
+  margin-top: 32px;
+}
+
+.hub-links-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.quick-link-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.quick-link-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(28, 25, 23, 0.06);
+}
+
+.quick-link-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+}
+
+.quick-link-info {
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quick-link-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-link-sub {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-link-arrow {
+  color: var(--text-tertiary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: transform 0.2s ease;
+}
+
+.quick-link-card:hover .quick-link-arrow {
+  transform: translateX(2px);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .landing-hub-section {
+    padding: 24px 20px;
+  }
+  .featured-paper-card {
+    padding: 20px 18px;
+  }
+  .paper-actions-grid {
+    flex-direction: column;
+  }
+  .btn-paper-action {
+    width: 100%;
+    justify-content: center;
+  }
+  .quick-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    SECCIONES PRINCIPALES
    ========================================================================== */
 .section {
@@ -879,6 +1296,11 @@ body::before {
   #investigacion .category-group[data-category] {
     display: block !important;
     opacity: 1 !important;
+  }
+
+  .spotlight-pill-wrapper,
+  .landing-hub-section {
+    display: none !important;
   }
 
   .pub-entry {

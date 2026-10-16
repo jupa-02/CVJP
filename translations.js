@@ -6,12 +6,56 @@
 
 var translations = window.translations = {
   es: {
+    "nav.destacados": "⭐ Destacados",
     "nav.experiencia": "Experiencia",
     "nav.educacion": "Educación",
     "nav.investigacion": "Investigación",
     "nav.premios": "Méritos",
     "nav.competencias": "Competencias",
     "nav.contacto": "Contacto",
+
+    "pill.tag": "🔥 RECURSO DEL VIDEO",
+    "pill.text": "Paper publicado: Efectos de la contratación pública en la innovación · Ver enlaces ➔",
+
+    "hub.kicker": "DIVULGACIÓN CIENTÍFICA & ACCESO RÁPIDO",
+    "hub.title": "Recursos Destacados & Enlaces del Video",
+    "hub.lead": "Espacio optimizado para acceder directamente a las publicaciones, plataformas interactivas y recursos mencionados en mis videos y redes sociales, sin rodeos ni búsquedas complejas.",
+
+    "featured.badge": "🔥 RECURSO DEL VIDEO · RECIÉN PUBLICADO (2025)",
+    "featured.journal": "Revista Panorama Económico · Publindex C",
+    "featured.title": "Effects of public procurement on the innovation propensity of Colombian manufacturing firms",
+    "featured.title.es": "Efectos de la contratación pública en la propensión a innovar de las empresas manufactureras colombianas",
+    "featured.authors": "Díaz Tovar, J. P., Rendón Rivera, B., & Escobar Espinoza, Á. · Vol. 33, Núm. 4 (2025), págs. 346–361",
+    "featured.metric1": "📊 <strong>Datos:</strong> DANE Encuesta EDIT X",
+    "featured.metric2": "📐 <strong>Modelo:</strong> Probit Microeconométrico",
+    "featured.metric3": "💡 <strong>Hallazgo:</strong> Contratar con el Estado incrementa la propensión a innovar",
+
+    "featured.btn.read": "Leer en la Revista (Visor Oficial) ↗",
+    "featured.btn.pdf": "Descargar PDF Directo 📥",
+    "featured.btn.doi": "Ver DOI Oficial ↗",
+    "featured.btn.cite": "Copiar Cita APA 📋",
+    "featured.btn.summary": "Ver Resumen & Claves del Video 💡",
+
+    "featured.takeaway.title": "Resumen Ejecutivo para la Audiencia del Video:",
+    "featured.takeaway.1": "<strong>1. El Problema Estructural:</strong> Tradicionalmente el Estado colombiano ha sido visto como un comprador transaccional de corto plazo, ignorando su rol estratégico como motor de demanda para la innovación.",
+    "featured.takeaway.2": "<strong>2. La Evidencia Empírica:</strong> Utilizando microdatos de la encuesta EDIT X del DANE y modelos Probit robustos, aislamos el efecto de contratar con el Estado controlando por tamaño de firma, gasto en ACTI e intensidad tecnológica.",
+    "featured.takeaway.3": "<strong>3. La Implicación de Política:</strong> Las compras públicas tienen un efecto positivo y estadísticamente significativo sobre la probabilidad de innovar. Orientar estratégicamente la contratación pública es una palanca real de política industrial activa.",
+
+    "hub.links.title": "Accesos Rápidos & Redes Sociales",
+    "hub.link.cv": "Hoja de Vida Completa (PDF)",
+    "hub.link.cv.sub": "Descargar versión editorial Harvard 2026",
+    "hub.link.linkedin": "LinkedIn Profesional",
+    "hub.link.linkedin.sub": "Conectar, debatir y seguir análisis",
+    "hub.link.github": "GitHub & Modelos Cuantitativos",
+    "hub.link.github.sub": "Repositorios de código en Python, R y Stata",
+    "hub.link.consejo": "Portal Consejo de Economía",
+    "hub.link.consejo.sub": "Indicadores en tiempo real (TRM, IPC, PIB)",
+    "hub.link.apuestas": "Plataforma Apuestas Productivas",
+    "hub.link.apuestas.sub": "Herramienta interactiva territorial de Bolívar",
+    "hub.link.contact": "Contacto Directo",
+    "hub.link.contact.sub": "juanpablodiaztovar9@gmail.com",
+
+    "toast.cite": "✓ Cita APA copiada al portapapeles",
 
     "bio.title": "Juan Pablo Diaz Tovar <br><em>Economista</em>",
     "bio.subtitle": "Investigador y analista cuantitativo especializado en econometría aplicada, innovación regional y políticas públicas, con sólidas competencias en la integración de Modelos de Inteligencia Artificial para optimizar procesos. Estudiante de Doctorado en Administración en la Universidad de Cartagena, analista económico y <strong>Asistente de Investigación del Grupo Economía, Ciencia & Sociedad (Grupo Categoría A1 MinCiencias)</strong>.",
@@ -83,7 +127,7 @@ var translations = window.translations = {
 
     "res.art.head": "Artículos en Revistas Científicas Indexadas",
     "res.art.1.meta": "Escobar, A., Diaz, J. P., De la Hoz, B. · <span class=\"pub-journal\">Revista de Ciencias Sociales</span> <span class=\"pub-status\">[Categoría Q2 · Aceptado en proceso de publicación]</span>",
-    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Categoría C Publindex · Publicado]</span> · <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">doi.org/10.32997/pe-2025-5935 ↗</a>",
+    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Categoría C Publindex · Publicado]</span> · <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">doi.org/10.32997/pe-2025-5935 ↗</a> · <a href=\"https://revistas.unicartagena.edu.co/index.php/panoramaeconomico/article/view/5935/4498\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">Ver en Revista ↗</a>",
 
     "res.inf.head": "Informes Técnicos Elaborados para la Alcaldía de Cartagena (2025)",
     "res.plat.head": "Plataformas Digitales e Interactivas Desarrolladas",
@@ -157,12 +201,56 @@ var translations = window.translations = {
   },
 
   en: {
+    "nav.destacados": "⭐ Featured",
     "nav.experiencia": "Experience",
     "nav.educacion": "Education",
     "nav.investigacion": "Research",
     "nav.premios": "Honors",
     "nav.competencias": "Skills",
     "nav.contacto": "Contact",
+
+    "pill.tag": "🔥 VIDEO RESOURCE",
+    "pill.text": "Published Paper: Effects of public procurement on innovation · Direct links ➔",
+
+    "hub.kicker": "SCIENTIFIC OUTREACH & FAST ACCESS",
+    "hub.title": "Featured Resources & Video Links",
+    "hub.lead": "A streamlined hub to access my latest publications, interactive platforms, and resources shared across social media and videos—fast, direct, and zero hassle.",
+
+    "featured.badge": "🔥 VIDEO RESOURCE · RECENTLY PUBLISHED (2025)",
+    "featured.journal": "Revista Panorama Económico · Publindex C",
+    "featured.title": "Effects of public procurement on the innovation propensity of Colombian manufacturing firms",
+    "featured.title.es": "Effects of public procurement on the innovation propensity of Colombian manufacturing firms",
+    "featured.authors": "Díaz Tovar, J. P., Rendón Rivera, B., & Escobar Espinoza, Á. · Vol. 33, No. 4 (2025), pp. 346–361",
+    "featured.metric1": "📊 <strong>Data:</strong> DANE EDIT X Manufacturing Survey",
+    "featured.metric2": "📐 <strong>Model:</strong> Microeconometric Probit",
+    "featured.metric3": "💡 <strong>Finding:</strong> Public contracts significantly boost innovation propensity",
+
+    "featured.btn.read": "Read on Journal (Official Viewer) ↗",
+    "featured.btn.pdf": "Download Direct PDF 📥",
+    "featured.btn.doi": "View Official DOI ↗",
+    "featured.btn.cite": "Copy APA Citation 📋",
+    "featured.btn.summary": "View Video Takeaways & Abstract 💡",
+
+    "featured.takeaway.title": "Executive Summary for Video Viewers:",
+    "featured.takeaway.1": "<strong>1. The Structural Problem:</strong> The State in emerging economies has traditionally been treated as a transactional buyer, overlooking its strategic demand-side power to stimulate firm-level innovation.",
+    "featured.takeaway.2": "<strong>2. Empirical Evidence:</strong> Using microdata from DANE's EDIT X and robust Probit modeling, we isolate the causal role of government contracts while controlling for firm size, R&D/ACTI spending, and tech intensity.",
+    "featured.takeaway.3": "<strong>3. Policy Implication:</strong> Public procurement has a positive, statistically significant impact on innovation propensity, demonstrating that public buying is an effective active industrial policy lever.",
+
+    "hub.links.title": "Quick Links & Professional Networks",
+    "hub.link.cv": "Full Curriculum Vitae (PDF)",
+    "hub.link.cv.sub": "Download Harvard editorial format 2026",
+    "hub.link.linkedin": "Professional LinkedIn",
+    "hub.link.linkedin.sub": "Connect, debate, and follow economic analysis",
+    "hub.link.github": "GitHub & Quantitative Code",
+    "hub.link.github.sub": "Repositories in Python, R, and Stata",
+    "hub.link.consejo": "Economic Council Portal",
+    "hub.link.consejo.sub": "Live economic indicators (TRM, CPI, GDP)",
+    "hub.link.apuestas": "Productive Bets Platform",
+    "hub.link.apuestas.sub": "Interactive regional analytics tool for Bolívar",
+    "hub.link.contact": "Direct Contact",
+    "hub.link.contact.sub": "juanpablodiaztovar9@gmail.com",
+
+    "toast.cite": "✓ APA Citation copied to clipboard",
 
     "bio.title": "Juan Pablo Diaz Tovar <br><em>Economist</em>",
     "bio.subtitle": "Quantitative researcher and analyst specializing in applied econometrics, regional innovation, and public policy, with strong expertise in integrating Artificial Intelligence models for process optimization. PhD Student in Management at the University of Cartagena, economic analyst, and <strong>Research Assistant at the Economics, Science & Society Research Group (MinCiencias A1 Category Group)</strong>.",
@@ -234,7 +322,7 @@ var translations = window.translations = {
 
     "res.art.head": "Peer-Reviewed Scientific Journal Articles",
     "res.art.1.meta": "Escobar, A., Diaz, J. P., De la Hoz, B. · <span class=\"pub-journal\">Revista de Ciencias Sociales</span> <span class=\"pub-status\">[Q2 Category · Accepted & In Press]</span>",
-    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Publindex C Category · Published]</span> · <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">doi.org/10.32997/pe-2025-5935 ↗</a>",
+    "res.art.2.meta": "Diaz, J. P., Rendon, B., Escobar, A. · <span class=\"pub-journal\">Revista Panorama Económico</span> <span class=\"pub-status\">[Publindex C Category · Published]</span> · <a href=\"https://doi.org/10.32997/pe-2025-5935\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">doi.org/10.32997/pe-2025-5935 ↗</a> · <a href=\"https://revistas.unicartagena.edu.co/index.php/panoramaeconomico/article/view/5935/4498\" target=\"_blank\" style=\"color: var(--accent-blue); text-decoration: none; margin-left: 6px;\">View on Journal ↗</a>",
 
     "res.inf.head": "Technical Reports Prepared for the Mayor's Office of Cartagena (2025)",
     "res.plat.head": "Developed Digital & Interactive Platforms",

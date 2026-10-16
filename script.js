@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavHighlight();
   initPublicationSearchAndFilters();
   initCopyEmail();
+  initLandingHubInteractions();
   initLanguageSwitch();
   initBackToTop();
 });
@@ -96,13 +97,25 @@ function initPublicationSearchAndFilters() {
 }
 
 /**
- * 3. Botón de copiado ejecutivo con notificación Toast
+ * Helper global para notificación Toast
+ */
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(window._toastTimeout);
+  window._toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
+/**
+ * 3. Botón de copiado ejecutivo de correo
  */
 function initCopyEmail() {
   const copyButtons = document.querySelectorAll('.copy-email-btn');
-  const toast = document.getElementById('toast');
-
-  if (!copyButtons.length || !toast) return;
+  if (!copyButtons.length) return;
 
   copyButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -118,14 +131,67 @@ function initCopyEmail() {
       }
     });
   });
+}
 
-  function showToast(message) {
-    toast.textContent = message;
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
+/**
+ * 4. Interacciones del Landing Hub & Recursos del Video
+ */
+function initLandingHubInteractions() {
+  // A. Copiar Cita APA
+  const citeBtns = document.querySelectorAll('.copy-citation-btn');
+  citeBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const citation = btn.getAttribute('data-citation');
+      if (navigator.clipboard && citation) {
+        navigator.clipboard.writeText(citation).then(() => {
+          const lang = localStorage.getItem('cv_lang') || 'es';
+          const dict = window.translations || (typeof translations !== 'undefined' ? translations : null);
+          const msg = (dict && dict[lang] && dict[lang]['toast.cite']) || '✓ Cita APA copiada al portapapeles';
+          showToast(msg);
+        }).catch(() => {
+          showToast('✓ Cita copiada al portapapeles');
+        });
+      }
+    });
+  });
+
+  // B. Acordeón de Claves del Video / Takeaways
+  const toggleTakeawaysBtn = document.getElementById('toggle-takeaways');
+  const takeawaysDrawer = document.getElementById('takeaways-drawer');
+  if (toggleTakeawaysBtn && takeawaysDrawer) {
+    toggleTakeawaysBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isHidden = takeawaysDrawer.hidden;
+      takeawaysDrawer.hidden = !isHidden;
+      toggleTakeawaysBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    });
   }
+
+  // C. Detección de Enlace Directo desde Videos (#video, #destacados, #paper-video, ?ref=video)
+  function checkVideoDeepLink() {
+    const hash = window.location.hash.toLowerCase();
+    const search = window.location.search.toLowerCase();
+    const isVideoRef = hash === '#video' || hash === '#destacados' || hash === '#paper-video' || search.includes('ref=video');
+
+    if (isVideoRef) {
+      const targetCard = document.getElementById('paper-video') || document.getElementById('destacados');
+      if (targetCard) {
+        setTimeout(() => {
+          const offset = 90;
+          const top = targetCard.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+          targetCard.classList.add('spotlight-glow');
+          setTimeout(() => {
+            targetCard.classList.remove('spotlight-glow');
+          }, 3500);
+        }, 200);
+      }
+    }
+  }
+
+  checkVideoDeepLink();
+  window.addEventListener('hashchange', checkVideoDeepLink);
 }
 
 /**

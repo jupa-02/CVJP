@@ -39,6 +39,7 @@
       </div>
       <nav class="header-nav-wrapper">
         <ul class="header-nav">
+          <li><a href="#destacados" data-i18n="nav.destacados" class="nav-highlight-link">⭐ Destacados</a></li>
           <li><a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a></li>
           <li><a href="#educacion" data-i18n="nav.educacion">Educación</a></li>
           <li><a href="#investigacion" data-i18n="nav.investigacion">Investigación</a></li>
@@ -53,6 +54,14 @@
   <!-- Encabezado y Bio Editorial -->
   <main>
     <section class="bio-section">
+      <!-- Píldora de Aviso Destacado / Recurso del Video Reciente -->
+      <div class="spotlight-pill-wrapper">
+        <a href="#destacados" class="spotlight-pill" aria-label="Ver recurso del video reciente">
+          <span class="spotlight-pill-badge" data-i18n="pill.tag">🔥 RECURSO DEL VIDEO</span>
+          <span class="spotlight-pill-text" data-i18n="pill.text">Paper publicado: Efectos de la contratación pública en la innovación · Ver enlaces ➔</span>
+        </a>
+      </div>
+
       <h1 class="bio-title" data-i18n="bio.title">
         Juan Pablo Diaz Tovar <br>
         <em>Economista</em>
@@ -119,6 +128,212 @@
           </svg>
           <span>Publicaciones Académicas</span>
         </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN LANDING HUB: Recursos Destacados & Enlaces del Video -->
+    <section class="section landing-hub-section" id="destacados">
+      <div class="hub-header">
+        <div class="hub-kicker" data-i18n="hub.kicker">DIVULGACIÓN CIENTÍFICA & ACCESO RÁPIDO</div>
+        <h2 class="section-title hub-title" data-i18n="hub.title">Recursos Destacados & Enlaces del Video</h2>
+        <p class="hub-lead" data-i18n="hub.lead">
+          Espacio optimizado para acceder directamente a las publicaciones, plataformas interactivas y recursos mencionados en mis videos y redes sociales, sin rodeos ni búsquedas complejas.
+        </p>
+      </div>
+
+      <!-- Tarjeta Hero de Alto Impacto: Paper del Video Reciente -->
+      <article class="featured-paper-card" id="paper-video">
+        <div class="featured-card-top">
+          <div class="featured-badge-group">
+            <span class="featured-badge live-pulse-badge" data-i18n="featured.badge">🔥 RECURSO DEL VIDEO · RECIÉN PUBLICADO (2025)</span>
+            <span class="featured-journal-tag" data-i18n="featured.journal">Revista Panorama Económico · Publindex C</span>
+          </div>
+          <span class="featured-year">Vol. 33 (4) · 2025</span>
+        </div>
+
+        <h3 class="featured-paper-title" data-i18n="featured.title">
+          "Effects of public procurement on the innovation propensity of Colombian manufacturing firms"
+        </h3>
+        
+        <p class="featured-paper-authors" data-i18n="featured.authors">
+          Díaz Tovar, J. P., Rendón Rivera, B., & Escobar Espinoza, Á. · Vol. 33, Núm. 4 (2025), págs. 346–361
+        </p>
+
+        <!-- Píldoras de Metodología y Hallazgos Clave -->
+        <div class="featured-metrics-row">
+          <div class="metric-pill" data-i18n="featured.metric1">
+            📊 <strong>Datos:</strong> DANE Encuesta EDIT X
+          </div>
+          <div class="metric-pill" data-i18n="featured.metric2">
+            📐 <strong>Modelo:</strong> Probit Microeconométrico
+          </div>
+          <div class="metric-pill" data-i18n="featured.metric3">
+            💡 <strong>Hallazgo:</strong> Contratar con el Estado incrementa la propensión a innovar
+          </div>
+        </div>
+
+        <!-- Botones de Acción Inmediata (1 Clic) -->
+        <div class="paper-actions-grid">
+          <a href="https://revistas.unicartagena.edu.co/index.php/panoramaeconomico/article/view/5935/4498" target="_blank" rel="noopener noreferrer" class="btn-paper-action btn-primary-action" data-i18n="featured.btn.read">
+            <svg class="action-btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+            <span>Leer en la Revista (Visor Oficial) ↗</span>
+          </a>
+
+          <a href="https://revistas.unicartagena.edu.co/index.php/panoramaeconomico/article/download/5935/4498" target="_blank" rel="noopener noreferrer" class="btn-paper-action" data-i18n="featured.btn.pdf">
+            <svg class="action-btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Descargar PDF Directo 📥</span>
+          </a>
+
+          <a href="https://doi.org/10.32997/pe-2025-5935" target="_blank" rel="noopener noreferrer" class="btn-paper-action" data-i18n="featured.btn.doi">
+            <svg class="action-btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>Ver DOI Oficial ↗</span>
+          </a>
+
+          <button type="button" class="btn-paper-action copy-citation-btn" data-citation="Díaz Tovar, J. P., Rendón Rivera, B., & Escobar Espinoza, Á. (2025). Efectos de la contratación pública en la propensión a innovar de las empresas manufactureras colombianas. Panorama Económico, 33(4), 346–361. https://doi.org/10.32997/pe-2025-5935" data-i18n="featured.btn.cite">
+            <svg class="action-btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>Copiar Cita APA 📋</span>
+          </button>
+
+          <button type="button" class="btn-paper-action toggle-takeaways-btn" id="toggle-takeaways" aria-expanded="false" data-i18n="featured.btn.summary">
+            <svg class="action-btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span>Ver Resumen & Claves del Video 💡</span>
+          </button>
+        </div>
+
+        <!-- Desplegable con los Hallazgos Clave para la Audiencia del Video -->
+        <div class="takeaways-drawer" id="takeaways-drawer" hidden>
+          <div class="takeaways-content">
+            <h4 class="takeaways-header" data-i18n="featured.takeaway.title">Resumen Ejecutivo para la Audiencia del Video:</h4>
+            <ul class="takeaways-list">
+              <li data-i18n="featured.takeaway.1">
+                <strong>1. El Problema Estructural:</strong> Tradicionalmente el Estado colombiano ha sido visto como un comprador transaccional de corto plazo, ignorando su rol estratégico como motor de demanda para la innovación.
+              </li>
+              <li data-i18n="featured.takeaway.2">
+                <strong>2. La Evidencia Empírica:</strong> Utilizando microdatos de la encuesta EDIT X del DANE y modelos Probit robustos, aislamos el efecto de contratar con el Estado controlando por tamaño de firma, gasto en ACTI e intensidad tecnológica.
+              </li>
+              <li data-i18n="featured.takeaway.3">
+                <strong>3. La Implicación de Política:</strong> Las compras públicas tienen un efecto positivo y estadísticamente significativo sobre la probabilidad de innovar. Orientar estratégicamente la contratación pública es una palanca real de política industrial activa.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel de Accesos Rápidos & Redes (Link Hub Grid) -->
+      <div class="hub-links-wrapper">
+        <h3 class="hub-links-title" data-i18n="hub.links.title">Accesos Rápidos & Redes Sociales</h3>
+        <div class="quick-links-grid">
+          <!-- CV en PDF -->
+          <a href="CV_JPD_2026.pdf" download="CV_Juan_Pablo_Diaz_Tovar_2026.pdf" class="quick-link-card">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="12" y2="18"/>
+                <line x1="15" y1="15" x2="12" y2="18"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.cv">Hoja de Vida Completa (PDF)</span>
+              <span class="quick-link-sub" data-i18n="hub.link.cv.sub">Descargar versión editorial Harvard 2026</span>
+            </div>
+            <span class="quick-link-arrow">↓</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/juan-pablo-diaz-tovar-2549041b5" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.linkedin">LinkedIn Profesional</span>
+              <span class="quick-link-sub" data-i18n="hub.link.linkedin.sub">Conectar, debatir y seguir análisis</span>
+            </div>
+            <span class="quick-link-arrow">↗</span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/jupa-02" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.github">GitHub & Modelos Cuantitativos</span>
+              <span class="quick-link-sub" data-i18n="hub.link.github.sub">Repositorios de código en Python, R y Stata</span>
+            </div>
+            <span class="quick-link-arrow">↗</span>
+          </a>
+
+          <!-- Plataforma Consejo -->
+          <a href="https://jupa-02.github.io/consejo-economia/" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.consejo">Portal Consejo de Economía</span>
+              <span class="quick-link-sub" data-i18n="hub.link.consejo.sub">Indicadores en tiempo real (TRM, IPC, PIB)</span>
+            </div>
+            <span class="quick-link-arrow">↗</span>
+          </a>
+
+          <!-- Plataforma Apuestas Productivas -->
+          <a href="https://apuestasproductivas.unicartagena.edu.co" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.apuestas">Plataforma Apuestas Productivas</span>
+              <span class="quick-link-sub" data-i18n="hub.link.apuestas.sub">Herramienta interactiva territorial de Bolívar</span>
+            </div>
+            <span class="quick-link-arrow">↗</span>
+          </a>
+
+          <!-- Contacto Directo -->
+          <button type="button" class="quick-link-card copy-email-btn" data-email="juanpablodiaztovar9@gmail.com">
+            <div class="quick-link-icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="quick-link-info">
+              <span class="quick-link-label" data-i18n="hub.link.contact">Contacto Directo</span>
+              <span class="quick-link-sub" data-i18n="hub.link.contact.sub">juanpablodiaztovar9@gmail.com</span>
+            </div>
+            <span class="quick-link-arrow">📋</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -254,7 +469,7 @@
           <div class="pub-entry">
             <div class="pub-title">"Effects of public procurement on the innovation propensity of Colombian manufacturing firms"</div>
             <div class="pub-meta" data-i18n="res.art.2.meta">
-              Diaz, J. P., Rendon, B., Escobar, A. · <span class="pub-journal">Revista Panorama Económico</span> <span class="pub-status">[Categoría C Publindex · Publicado]</span> · <a href="https://doi.org/10.32997/pe-2025-5935" target="_blank" style="color: var(--accent-blue); text-decoration: none; margin-left: 6px;">doi.org/10.32997/pe-2025-5935 ↗</a>
+              Diaz, J. P., Rendon, B., Escobar, A. · <span class="pub-journal">Revista Panorama Económico</span> <span class="pub-status">[Categoría C Publindex · Publicado]</span> · <a href="https://doi.org/10.32997/pe-2025-5935" target="_blank" style="color: var(--accent-blue); text-decoration: none; margin-left: 6px;">doi.org/10.32997/pe-2025-5935 ↗</a> · <a href="https://revistas.unicartagena.edu.co/index.php/panoramaeconomico/article/view/5935/4498" target="_blank" style="color: var(--accent-blue); text-decoration: none; margin-left: 6px;">Ver en Revista ↗</a>
             </div>
           </div>
         </div>
