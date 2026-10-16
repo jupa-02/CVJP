@@ -40,7 +40,7 @@ var translations = window.translations = {
 
     "hub.links.title": "Plataformas Académicas & Producción Científica",
     "hub.link.apuestas": "Plataforma Apuestas Productivas",
-    "hub.link.apuestas.sub": "Herramienta interactiva territorial de Bolívar (Universidad de Cartagena)",
+    "hub.link.apuestas.sub": "Herramienta interactiva territorial de Bolívar · U. de Cartagena",
     "hub.link.pubs": "Producción Científica Completa",
     "hub.link.pubs.sub": "Artículos indexados, capítulos de libro e informes de investigación",
 
@@ -226,7 +226,7 @@ var translations = window.translations = {
 
     "hub.links.title": "Academic Platforms & Scientific Research",
     "hub.link.apuestas": "Productive Bets Platform",
-    "hub.link.apuestas.sub": "Interactive regional analysis tool for Bolívar (U. of Cartagena)",
+    "hub.link.apuestas.sub": "Interactive regional analysis tool for Bolívar · U. of Cartagena",
     "hub.link.pubs": "Full Scientific Publications",
     "hub.link.pubs.sub": "Peer-reviewed articles, book chapters & research reports",
 

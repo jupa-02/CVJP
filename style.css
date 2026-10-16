@@ -420,6 +420,10 @@ body::before {
   padding: 36px 36px 40px;
   margin-bottom: 72px !important;
   box-shadow: 0 16px 40px -12px rgba(28, 25, 23, 0.06);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hub-header {
@@ -663,6 +667,10 @@ body::before {
 /* Panel de Enlaces Rápidos (Estilo Link Hub / Landing) */
 .hub-links-wrapper {
   margin-top: 32px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hub-links-title {
@@ -676,9 +684,10 @@ body::before {
 
 .quick-links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -695,8 +704,12 @@ body::before {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   text-align: left;
   font-family: inherit;
+  overflow: hidden;
 }
 
 .quick-link-card:hover {
@@ -720,28 +733,29 @@ body::before {
 }
 
 .quick-link-info {
-  flex-grow: 1;
+  flex: 1 1 0%;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
+  overflow: hidden;
 }
 
 .quick-link-label {
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 .quick-link-sub {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
 .quick-link-arrow {
@@ -749,6 +763,7 @@ body::before {
   font-weight: 600;
   font-size: 0.92rem;
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .quick-link-card:hover .quick-link-arrow {
@@ -760,10 +775,15 @@ body::before {
   .landing-hub-section {
     padding: 24px 16px;
     border-radius: 12px;
+    overflow: hidden;
   }
   .featured-paper-card {
     padding: 20px 14px;
     border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .featured-card-top {
     flex-direction: column;
@@ -796,7 +816,19 @@ body::before {
     font-size: 0.85rem;
   }
   .quick-links-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+  }
+  .quick-link-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 14px 14px;
   }
   .social-badges-row {
     display: flex;
